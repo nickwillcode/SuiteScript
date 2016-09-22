@@ -19,7 +19,7 @@ if (type == 'create' || type == 'edit')
          	//Converts the string to date and returns the date object.
                 var tDate = nlapiStringToDate(invDate, 'datetz');
 
-		      var m = tDate.getMonth(); //current month
+		var m = tDate.getMonth(); //current month
          	var y = tDate.getFullYear(); //current year
 
          	// DD.MM.YYYY
