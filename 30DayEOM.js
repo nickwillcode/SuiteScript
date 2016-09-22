@@ -13,11 +13,11 @@ if (type == 'create' || type == 'edit')
     	if (invTerm == '2')
         	{
 
-          var newRecord = nlapiGetNewRecord();
-          var invDate = nlapiGetFieldValue('trandate');
+                var newRecord = nlapiGetNewRecord();
+         	var invDate = nlapiGetFieldValue('trandate');
 
-          //Converts the string to date and returns the date object.
-          var tDate = nlapiStringToDate(invDate, 'datetz');
+         	//Converts the string to date and returns the date object.
+                var tDate = nlapiStringToDate(invDate, 'datetz');
 
 		      var m = tDate.getMonth(); //current month
          	var y = tDate.getFullYear(); //current year
@@ -26,7 +26,7 @@ if (type == 'create' || type == 'edit')
 
         	var currentFirstDate = '1/'+(m+1)+'/'+y; //current first date
 
-          //Converts the string to date and returns the date object.
+                //Converts the string to date and returns the date object.
 	      	var firstDate = nlapiStringToDate(currentFirstDate, 'datetz');
 
         	// Add 2 months to firstDate, then -1 day
