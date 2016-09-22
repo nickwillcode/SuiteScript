@@ -14,9 +14,9 @@ if (type == 'create' || type == 'edit')
         	{
 
           var newRecord = nlapiGetNewRecord();
-         	var invDate = nlapiGetFieldValue('trandate');
+          var invDate = nlapiGetFieldValue('trandate');
 
-         	//Converts the string to date and returns the date object.
+          //Converts the string to date and returns the date object.
           var tDate = nlapiStringToDate(invDate, 'datetz');
 
 		      var m = tDate.getMonth(); //current month
