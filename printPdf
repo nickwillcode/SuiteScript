@@ -5,6 +5,10 @@ pdf.setName(poNumber + '-' + nlapiLookupField('purchaseorder', poID,'custbody_po
 nlapiSubmitFile(pdf);
 */
 
+/*
+Set your saved search type, saved search id, File Cabinet Folder, 
+*/
+
 function printPdf(){
 
         var searchresults = nlapiSearchRecord('transaction', 'customsearch398');
