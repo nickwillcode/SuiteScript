@@ -7,9 +7,18 @@ nlapiSubmitFile(pdf);
 
 function printPdf(){
 
-  var file = nlapiPrintRecord('TRANSACTION', 17034, 'PDF', null); //internal id of transaction (e.g Item Fulfillment)
-  file.setFolder(6908);
-  nlapiSubmitFile(file);
-  var x = 1;
+        var searchresults = nlapiSearchRecord('transaction', 'customsearch398');
 
-}
+        for ( var i = 0; searchresults != null && i < searchresults.length; i++ ) {
+
+        var customerrecordid = searchresults[i].getId();
+
+        nlapiLogExecution('DEBUG', customerrecordid);
+
+        var file = nlapiPrintRecord('TRANSACTION', customerrecordid, 'PDF', null); //internal id of transaction (e.g Item Fulfillment)
+        file.setFolder(6908);
+        nlapiSubmitFile(file);
+          //  var x = 1;
+          }
+
+  }
